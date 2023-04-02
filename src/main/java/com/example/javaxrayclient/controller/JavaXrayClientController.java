@@ -1,9 +1,10 @@
-package com.example.echo.controller;
+package com.example.javaxrayclient.controller;
 
 import com.amazonaws.xray.AWSXRay;
-import com.example.echo.client.JavaXrayClientClient;
+import com.example.javaxrayclient.client.JavaXrayClientClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,10 +16,13 @@ import java.util.Objects;
 
 @RestController
 @Slf4j
-@RequiredArgsConstructor
 public class JavaXrayClientController {
 
-    private JavaXrayClientClient client;
+    private final JavaXrayClientClient client;
+
+    public JavaXrayClientController(JavaXrayClientClient client) {
+        this.client = client;
+    }
 
     @GetMapping("/echo")
     public ResponseEntity<Object> get(@RequestBody(required = false) Object requestDto) {

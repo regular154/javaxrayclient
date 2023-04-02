@@ -1,4 +1,4 @@
-package com.example.echo.client;
+package com.example.javaxrayclient.client;
 
 import com.amazonaws.xray.spring.aop.XRayEnabled;
 import org.springframework.beans.factory.annotation.Value;

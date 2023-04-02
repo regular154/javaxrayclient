@@ -1,4 +1,4 @@
-package com.example.echo.config;
+package com.example.javaxrayclient.config;
 
 import com.amazonaws.xray.entities.Subsegment;
 import com.amazonaws.xray.spring.aop.BaseAbstractXRayInterceptor;

@@ -1,4 +1,4 @@
-package com.example.echo.config;
+package com.example.javaxrayclient.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
